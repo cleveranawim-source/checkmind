@@ -335,13 +335,41 @@ const SF=[
   '🫧 지금 이 순간만 느끼면 돼.',
 ];
 const TYPES=[
-  {d:3.5,e:2.5,em:'🔥',n:'연소형',desc:'에너지를 거의 다 소진한 상태입니다. 지금 가장 필요한 건 "멈춤"이에요. 더 잘하려고 하기 전에, 먼저 채우는 시간이 필요합니다.',tip:'번아웃 연구자 Maslach는 이 상태에서 가장 먼저 해야 할 것은 과제 축소와 회복 루틴 확보라고 말합니다.'},
-  {d:3.5,e:3.5,em:'🌊',n:'표류형',desc:'방향을 잃은 채 흘러가고 있는 상태입니다. 일의 의미는 어렴풋이 보이지만, 중압감이 큰 상황이에요.',tip:'이 유형에게 필요한 건 거대한 변화가 아닌, 작은 성공 경험과 신뢰할 수 있는 연결고리입니다.'},
-  {d:3.5,e:99,em:'⚡',n:'분투형',desc:'몸은 지쳐 있지만 일의 의미는 여전히 붙잡고 있어요. 그 힘으로 버티고 있는 중이에요.',tip:'분투형에게 가장 큰 위험은 의미감마저 소진되는 것입니다. 지속 가능성을 지금부터 설계하세요.'},
-  {d:2.5,e:2.5,em:'☁️',n:'흐림형',desc:'무겁고 흐린 날씨 같은 상태예요. 큰 위기는 아니지만, 빛을 찾기 어려운 때입니다.',tip:'이 상태는 지속되면 더 깊은 소진으로 발전합니다. 작은 회복 신호에 먼저 주목하세요.'},
-  {d:2.5,e:3.5,em:'🌤',n:'안개형',desc:'안개 속을 걷고 있지만 빛은 있어요. 조금씩 나아가고 있는 중입니다.',tip:'안개형은 충분한 자기효능감을 갖고 있어요. 회복 루틴을 꾸준히 유지하는 것이 관건입니다.'},
-  {d:2.5,e:99,em:'🔆',n:'회복 중',desc:'한고비를 넘기는 과정에 있어요. 자원과 의미를 균형 있게 유지하고 있습니다.',tip:'지금 이 상태를 당연하게 여기지 마세요. 회복을 유지시키는 루틴을 의식적으로 지켜나가세요.'},
-  {d:0,e:0,em:'🌱',n:'균형형',desc:'상대적으로 안정된 상태예요. 소진과 냉소가 낮고 자기효능감도 유지되고 있어요.',tip:'이 상태를 유지하는 것 자체가 예방적 자기관리입니다. 지금의 루틴과 연결을 소중히 여기세요.'},
+  {d:3.5,e:2.5,em:'🔥',n:'연소형',
+   desc:'에너지를 거의 다 소진한 상태입니다. 지금 가장 필요한 건 "멈춤"이에요. 더 잘하려고 하기 전에, 먼저 채우는 시간이 필요합니다.',
+   quote:'"그냥 버티고 있어요." "아무것도 느껴지지 않아요." "이 일을 왜 하는지 모르겠어요."',
+   recovery:'지금 당장 과제를 줄이고, 주변에 도움을 요청하세요. 혼자 감당하려 하지 마세요.',
+   tip:'번아웃 연구자 Maslach는 이 상태에서 가장 먼저 해야 할 것은 과제 축소와 회복 루틴 확보라고 말합니다.'},
+  {d:3.5,e:3.5,em:'🌊',n:'표류형',
+   desc:'방향을 잃은 채 흘러가고 있는 상태입니다. 일의 의미는 어렴풋이 보이지만, 중압감이 큰 상황이에요.',
+   quote:'"열심히 하는데 왜 이러는지 모르겠어요." "뭔가 잘못된 것 같은데 뭔지 모르겠어요."',
+   recovery:'거대한 변화보다 작은 성공 경험이 먼저입니다. 신뢰할 수 있는 동료 한 명과 연결되세요.',
+   tip:'이 유형에게 필요한 건 거대한 변화가 아닌, 작은 성공 경험과 신뢰할 수 있는 연결고리입니다.'},
+  {d:3.5,e:99,em:'⚡',n:'분투형',
+   desc:'몸은 지쳐 있지만 일의 의미는 여전히 붙잡고 있어요. 그 힘으로 버티고 있는 중이에요.',
+   quote:'"힘들지만 이 일은 의미 있어요. 그래서 계속해요." "쉬면 안 될 것 같아요."',
+   recovery:'의미감이 소진되기 전에 지속 가능한 루틴을 확보하세요. 쉬는 것이 사명을 지키는 방법입니다.',
+   tip:'분투형에게 가장 큰 위험은 의미감마저 소진되는 것입니다. 지속 가능성을 지금부터 설계하세요.'},
+  {d:2.5,e:2.5,em:'☁️',n:'흐림형',
+   desc:'무겁고 흐린 날씨 같은 상태예요. 큰 위기는 아니지만, 빛을 찾기 어려운 때입니다.',
+   quote:'"해도 되는 건지 모르겠어요." "내가 이 일에 맞는 사람인지 모르겠어요."',
+   recovery:'작은 성취 경험을 쌓고, 구체적인 피드백을 받으세요. 내 기여를 눈에 보이게 만드는 것이 도움이 됩니다.',
+   tip:'이 상태는 지속되면 더 깊은 소진으로 발전합니다. 작은 회복 신호에 먼저 주목하세요.'},
+  {d:2.5,e:3.5,em:'🌤',n:'안개형',
+   desc:'안개 속을 걷고 있지만 빛은 있어요. 조금씩 나아가고 있는 중입니다.',
+   quote:'"큰 문제는 없는데 뭔가 개운하지 않아요." "그냥 평범하게 지내고 있어요."',
+   recovery:'예방적 루틴을 강화하고, 일상 속 작은 기쁨을 의식적으로 찾아보세요.',
+   tip:'안개형은 충분한 자기효능감을 갖고 있어요. 회복 루틴을 꾸준히 유지하는 것이 관건입니다.'},
+  {d:2.5,e:99,em:'🔆',n:'회복 중',
+   desc:'한고비를 넘기는 과정에 있어요. 자원과 의미를 균형 있게 유지하고 있습니다.',
+   quote:'"예전보다 나아진 것 같아요." "그래도 아직 가끔 힘들긴 해요."',
+   recovery:'지금 하고 있는 루틴을 유지하세요. 무리해서 앞당기려 하지 말고 재충전 주기를 지키세요.',
+   tip:'지금 이 상태를 당연하게 여기지 마세요. 회복을 유지시키는 루틴을 의식적으로 지켜나가세요.'},
+  {d:0,e:0,em:'🌱',n:'균형형',
+   desc:'상대적으로 안정된 상태예요. 소진과 냉소가 낮고 자기효능감도 유지되고 있어요.',
+   quote:'"요즘 괜찮아요." "힘들 때도 있지만 잘 회복되는 것 같아요."',
+   recovery:'이 균형을 유지하는 것 자체가 이미 중요한 자기관리입니다. 여유가 생기면 주변 동료에게도 관심을 기울여보세요.',
+   tip:'이 상태를 유지하는 것 자체가 예방적 자기관리입니다. 지금의 루틴과 연결을 소중히 여기세요.'},
 ];
 
 const S={name:'',energy:5,emotion:'',burnout:{},stress:[],cope:'',care:[],selfMsg:''};
@@ -493,8 +521,16 @@ function showResult(){
     <div style="font-size:52px;margin-bottom:10px;">${type.em}</div>
     <div style="display:inline-block;background:#2D6B4A;color:#fff;font-size:13px;font-weight:700;padding:5px 16px;border-radius:99px;margin-bottom:12px;">${type.n}</div>
     <p style="font-size:13px;color:#1a1a1a;line-height:1.8;margin-bottom:14px;">${type.desc}</p>
-    <div style="background:#f7f7f7;border-radius:10px;padding:14px;text-align:left;">
-      <p style="font-size:11px;font-weight:700;color:#888;margin-bottom:5px;">연구가 말하는 것</p>
+    <div style="background:#FEF9C3;border-radius:10px;padding:12px;text-align:left;margin-bottom:10px;">
+      <p style="font-size:11px;font-weight:700;color:#92400E;margin-bottom:5px;">자주 하는 말</p>
+      <p style="font-size:12px;color:#78350F;line-height:1.7;font-style:italic;">${type.quote}</p>
+    </div>
+    <div style="background:#E8F5E9;border-radius:10px;padding:12px;text-align:left;margin-bottom:10px;">
+      <p style="font-size:11px;font-weight:700;color:#1B5E20;margin-bottom:5px;">회복 방향</p>
+      <p style="font-size:12px;color:#2E7D32;line-height:1.7;">${type.recovery}</p>
+    </div>
+    <div style="background:#f7f7f7;border-radius:10px;padding:12px;text-align:left;">
+      <p style="font-size:11px;font-weight:700;color:#888;margin-bottom:4px;">연구가 말하는 것</p>
       <p style="font-size:12px;color:#555;line-height:1.7;">${type.tip}</p>
     </div>
   </div>
